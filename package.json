@@ -1,0 +1,19 @@
+{
+  "name": "api-rest-javascript-practico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roiber21/Api-rest-javascript-practico.git"
+  },
+  "author": "@roiber21",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Roiber21/Api-rest-javascript-practico/issues"
+  },
+  "homepage": "https://github.com/Roiber21/Api-rest-javascript-practico#readme"
+}
