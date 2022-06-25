@@ -1,1 +1,3 @@
-console.log('hola mundo');
+async function getTrendingMoviesPreview{
+    const res= await fetch()
+}
