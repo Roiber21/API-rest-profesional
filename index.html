@@ -13,7 +13,7 @@
   <title>PlatziMovies</title>
 </head>
 <body>
-    <div class="arrow"> 
+    <div class="arrow inactive"> 
         <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_28_128)">
             <path d="M18 0C13.2261 0 8.64773 1.84374 5.27208 5.12563C1.89642 8.40752 0 12.8587 0 17.5C0 22.1413 1.89642 26.5925 5.27208 29.8744C8.64773 33.1563 13.2261 35 18 35C22.7739 35 27.3523 33.1563 30.7279 29.8744C34.1036 26.5925 36 22.1413 36 17.5C36 12.8587 34.1036 8.40752 30.7279 5.12563C27.3523 1.84374 22.7739 0 18 0V0ZM25.875 16.4062C26.1734 16.4062 26.4595 16.5215 26.6705 16.7266C26.8815 16.9317 27 17.2099 27 17.5C27 17.7901 26.8815 18.0683 26.6705 18.2734C26.4595 18.4785 26.1734 18.5938 25.875 18.5938H12.8407L17.6715 23.2881C17.7761 23.3898 17.8591 23.5105 17.9157 23.6434C17.9723 23.7763 18.0014 23.9187 18.0014 24.0625C18.0014 24.2063 17.9723 24.3487 17.9157 24.4816C17.8591 24.6145 17.7761 24.7352 17.6715 24.8369C17.5669 24.9386 17.4427 25.0192 17.3061 25.0743C17.1694 25.1293 17.0229 25.1576 16.875 25.1576C16.7271 25.1576 16.5806 25.1293 16.4439 25.0743C16.3073 25.0192 16.1831 24.9386 16.0785 24.8369L9.3285 18.2744C9.22373 18.1728 9.14061 18.0521 9.0839 17.9192C9.02718 17.7863 8.99799 17.6439 8.99799 17.5C8.99799 17.3561 9.02718 17.2137 9.0839 17.0808C9.14061 16.9479 9.22373 16.8272 9.3285 16.7256L16.0785 10.1631C16.2897 9.95775 16.5763 9.84237 16.875 9.84237C17.1737 9.84237 17.4603 9.95775 17.6715 10.1631C17.8827 10.3685 18.0014 10.6471 18.0014 10.9375C18.0014 11.2279 17.8827 11.5065 17.6715 11.7119L12.8407 16.4062H25.875Z" fill="#D9D9D9" fill-opacity="0.29"/>
@@ -26,11 +26,11 @@
             </svg>
             
     </div>
-<header class="user_info inactive">
+<header class="user_info ">
     <p class="hi">HI,</p> <p class="name">Roiber Figueroa!</p>
     <div class="user_img" src="" alt=""></div>
 </header>
-<form id="searchForm" class="searchForm inactive">
+<form id="searchForm" class="searchForm ">
     <input  type="text" placeholder="Search movies"/>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_15_25)">
@@ -43,42 +43,24 @@
         </defs>
         </svg>
   </form>
- <section class="tendencias inactive">
+ <section class="tendencias ">
      <span>Tendencias</span>
      <button>Ver más</button>
  </section>
-<main class="tendencias_movies inactive">
-    <article >
-        <div >
+<main id="trendingPreview" >
+    <article class="tendencias_movies">
+        <!-- <div >
           <img class="img_container" 
             src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
             class="movie-img"
             alt="Nombre de la película"
           />
-        </div>
+        </div> -->
+        
       </article>
   
-    <article >
-        <div >
-          <img class="img_container" 
-            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-            class="movie-img"
-            alt="Nombre de la película"
-          />
-        </div>
-      </article>
-  
-    <article >
-        <div >
-          <img class="img_container" 
-            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-            class="movie-img"
-            alt="Nombre de la película"
-          />
-        </div>
-      </article>
 </main>
-<section class="categories_container inactive" >
+<section class="categories_container " >
     <p>Categorías</p>
     <ul class="categories_ul">
         <li class="categories_li">Acción <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +105,7 @@
             </li>
     </ul>
 </section>
-<section class="movie_details ">
+<section class="movie_details inactive">
     <div  >
         <img class="movie_img" 
           src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
@@ -197,6 +179,7 @@
       </section>
 
 </section>
-
+<script src="./src/secrets.js"></script>
+<script src="./src/main.js"></script>
 </body>
 </html>

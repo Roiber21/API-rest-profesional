@@ -264,6 +264,19 @@ height: 32px;
 background: rgba(87, 161, 166, 0.54);
 border-radius: 5px;
 }
+.trendingPreview-movieList {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 241px;
+    padding-left: 24px;
+    padding-bottom: 16px;
+  }
+  
+  .trendingPreview-movieList .movie-container {
+    display: inline-block;
+    margin-right: 8px;
+  }
 /* Navigation */
 .inactive {
   display: none;
