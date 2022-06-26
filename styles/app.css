@@ -119,13 +119,13 @@ color: #F5F5F5;
 }
 .categories_ul{
  display: grid;
-grid-template-columns: 1fr 2fr 3fr 4fr 5fr 6fr;
+grid-template-columns: 1fr 2fr 3fr;
 padding: 21px 9px;
 gap: 10px;
 list-style: none;
 width: 347px;
-height: 76px;
-overflow-x: scroll;
+height: 500px;
+
 }
 .categories_li{
 width: 101px;
@@ -174,18 +174,7 @@ color: #FFFFFF;
     top: 495px;
     color:white;
 }
-.categories_li2{
 
-    width: 101px;
-    height: 34px;
-    background: rgba(87, 161, 166, 0.16);
-    border-radius: 19px;
-    text-align: center;
-    font-size: 16px;
-    color: white;
-    line-height: 30px;
-   
-}
 .categorie_movie{
     position: absolute;
 width: 342px;
@@ -264,19 +253,7 @@ height: 32px;
 background: rgba(87, 161, 166, 0.54);
 border-radius: 5px;
 }
-.trendingPreview-movieList {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    height: 241px;
-    padding-left: 24px;
-    padding-bottom: 16px;
-  }
-  
-  .trendingPreview-movieList .movie-container {
-    display: inline-block;
-    margin-right: 8px;
-  }
+
 /* Navigation */
 .inactive {
   display: none;
