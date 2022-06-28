@@ -33,6 +33,11 @@ function homePage (){
     genericList.classList.add('inactive')
     categoriesPreviewContainer.classList.remove('inactive')
     arrow.classList.add('inactive')
+    title_genericList.classList.add('inactive')
+    
+   
+  
+    
 
 
     getTrendingMoviesPreview();
@@ -71,6 +76,15 @@ function categoriesPage (){
     genericList.classList.remove('inactive')
     categoriesPreviewContainer.classList.add('inactive')
     arrow.classList.remove('inactive')
+    title_genericList.classList.remove('inactive')
+    
+    //   ['#category', 'id-name']
+    const [_, categoryData]= location.hash.split('=');
+    const [categoryId, categoryName]= categoryData.split('-')
+    title_genericList.innerHTML= categoryName;
+
+
+    getMoviesByCategorie(categoryId)
 }
 function movieDetailsPage (){
     console.log('MOVIE!!')
@@ -82,4 +96,6 @@ function movieDetailsPage (){
     genericList.classList.add('inactive')
     categoriesPreviewContainer.classList.add('inactive')
     arrow.classList.remove('inactive')
+    title_genericList.classList.add('inactive')
+    
 }

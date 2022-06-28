@@ -9,3 +9,5 @@ genericList= document.querySelector('#genericList');
 // elements
 arrow= document.querySelector('#arrow');
 trendingBtn= document.querySelector('#trendingBtn');
+title_genericList= document.querySelector('#title_genericList');
+
