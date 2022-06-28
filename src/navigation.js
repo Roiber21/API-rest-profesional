@@ -4,6 +4,10 @@ window.addEventListener('hashchange', navigator, false)
 trendingBtn.addEventListener('click', () => {
     location.hash = '#trends';
   });
+  search_button.addEventListener('click', () => {
+   
+    location.hash = '#search='+  searchFormInput.value;
+  });
 arrow.addEventListener('click', () => {
     location.hash = '#home';
   });
@@ -67,6 +71,12 @@ function searchPage (){
     genericList.classList.remove('inactive')
     categoriesPreviewContainer.classList.add('inactive')
     arrow.classList.remove('inactive')
+    title_genericList.classList.add('inactive')
+
+     
+    //   ['#search', 'buscador']
+    const [_, query]= location.hash.split('=');
+    getMoviesBySearch(query);
 }
 function categoriesPage (){
     console.log('CATEGORIES!!')

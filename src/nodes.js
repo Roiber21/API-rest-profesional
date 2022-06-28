@@ -8,6 +8,9 @@ genericList= document.querySelector('#genericList');
 
 // elements
 arrow= document.querySelector('#arrow');
+search_button= document.querySelector('#search_button');
+searchFormInput= document.querySelector('#searchForm input');
+
 trendingBtn= document.querySelector('#trendingBtn');
 title_genericList= document.querySelector('#title_genericList');
 
