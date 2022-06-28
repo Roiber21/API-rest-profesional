@@ -7,29 +7,33 @@ const api= axios.create({
     'api_key':API_KEY,
     }
 })
+// utils
+function creatMovies(movies, container){
+  container.innerHTML='';
+  movies.forEach(movie => {
+       
+    const movieContainer= document.createElement('div')
+     const movieImg= document.createElement('img')
+     movieImg.classList.add('img_container')
+     movieImg.classList.add('movie-img')
+     movieImg.setAttribute('alt', movie.title)
+     movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
+     
+     movieContainer.appendChild(movieImg)
+     container.appendChild(movieContainer)
+
+ });
+}
+  
+// llamados a la api
+
+
 
 async function getTrendingMoviesPreview() {
     const {data} = await api('/trending/movie/day?');
-   
-
-  
     const movies = data.results;
     console.log({movies})
-   
- trendingPreviewMoviesContainer.innerHTML= "";
-   movies.forEach(movie => {
-       
-      const movieContainer= document.createElement('div')
-       const movieImg= document.createElement('img')
-       movieImg.classList.add('img_container')
-       movieImg.classList.add('movie-img')
-       movieImg.setAttribute('alt', movie.title)
-       movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
-       
-       movieContainer.appendChild(movieImg)
-       trendingPreviewMoviesContainer.appendChild(movieContainer)
-
-   });
+    creatMovies(movies,trendingPreviewMoviesContainer);
 
   }
 async function getCategoriesPreview() {
@@ -65,28 +69,8 @@ async function getCategoriesPreview() {
       }
     });
    
-
-  
     const movies = data.results;
     console.log({movies})
-   
-    genericList.innerHTML= "";
-   movies.forEach(movie => {
-       
-      const movieContainer= document.createElement('div')
-       const movieImg= document.createElement('img')
-       movieImg.classList.add('img_container_categories')
-       movieImg.classList.add('movie-img')
-       movieImg.setAttribute('alt', movie.title)
-       movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
- 
-      
-      
-      
-     
-       movieContainer.appendChild(movieImg)
-       genericList.appendChild(movieContainer)
-
-   });
+    creatMovies(movies,genericList)
 
   }

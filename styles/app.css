@@ -1,5 +1,8 @@
 /* General */
-* { box-sizing: border-box; }
+* { box-sizing: border-box; 
+    
+}
+
 
 body{
     background-color: rgba(22, 33, 41, 1);
@@ -98,16 +101,17 @@ border-radius: 8px;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    width: 253px;
-height: 325px;
+    width: 161px;
+    height: 247px;
 border-radius: 21px;
 }
+
 .categories_container{
     position: absolute;
 width: 164px;
 height: 19px;
 left: 26px;
-top: 562px;
+top: 454px;
 
 font-family: 'Anaheim';
 font-style: normal;
