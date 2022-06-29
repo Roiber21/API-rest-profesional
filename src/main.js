@@ -18,11 +18,34 @@ function creatMovies(movies, container){
      movieImg.classList.add('movie-img')
      movieImg.setAttribute('alt', movie.title)
      movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
+     movieContainer.addEventListener('click', ()=>{
+       location.hash = '#movie=' + movie.id;
+     })
      
      movieContainer.appendChild(movieImg)
      container.appendChild(movieContainer)
 
  });
+}
+function createCategories(categories, container) {
+  container.innerHTML = "";
+
+  categories.forEach(category => {  
+    const categoryContainer = document.createElement('div');
+    categoryContainer.classList.add('categories_li2');
+
+    const categoryTitle = document.createElement('span');
+    categoryTitle.classList.add('category-title');
+    categoryTitle.setAttribute('id', 'id' + category.id);
+    categoryTitle.addEventListener('click', () => {
+      location.hash = `#category=${category.id}-${category.name}`;
+    });
+    const categoryTitleText = document.createTextNode(category.name);
+
+    categoryTitle.appendChild(categoryTitleText);
+    categoryContainer.appendChild(categoryTitle);
+    container.appendChild(categoryContainer);
+  });
 }
   
 // llamados a la api
@@ -39,7 +62,6 @@ async function getTrendingMoviesPreview() {
 async function getCategoriesPreview() {
     const {data} = await api('genre/movie/list?');
     
-  
     const categories = data.genres;
     const categoriesPreviewContainer= document.querySelector('#categoriesPreview .categories_ul')
     categoriesPreviewContainer.innerHTML = "";
@@ -104,3 +126,16 @@ async function getCategoriesPreview() {
     creatMovies(movies,genericList);
 
   }
+  async function getMovieById(id){
+    const {data:movie} = await api('movie/'+ id);
+    title_movie_details.textContent= movie.title;
+    sipnosis_movie.textContent= movie.overview;
+    reputation.textContent= movie.vote_average;
+    img_movie_details.setAttribute('src', 'https://image.tmdb.org/t/p/w500' + movie.poster_path)
+    img_movie_details.style.background=`linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%)`
+    createCategories(movie.genres, movieDetailCategoryList)
+  
+    
+
+  }
+ 

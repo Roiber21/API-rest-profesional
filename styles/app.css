@@ -6,6 +6,7 @@
 
 body{
     background-color: rgba(22, 33, 41, 1);
+    margin: 0;
 }
 .user_info{
     position: relative;
@@ -167,26 +168,33 @@ text-align: center;
 }
 .title_movie{
     position: absolute;
-width: 251px;
-height: 52px;
-left: 80px;
-top: 490px;
-font-family: 'Alfa Slab One';
-font-style: normal;
-font-weight: 900;
-font-size: 29px;
-line-height: 40px;
-
-color: #FFFFFF;
+    width: 100%;
+    height: 52px;
+    text-align: center;
+    top: 490px;
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 29px;
+    line-height: 40px;
+    color: #FFFFFF;
 
 }
 .reputation{
     position: absolute;
     width: 45px;
     height: 19px;
-    left: 281px;
-    top: 495px;
-    color:white;
+    left: 60px;
+    top: 515px;
+    color: white;
+}
+.reputation_icon{
+    position: absolute;
+    width: 45px;
+    height: 19px;
+    left: 20px;
+    top: 530px;
+    color: white;
 }
 
 .categorie_movie{
@@ -194,7 +202,7 @@ color: #FFFFFF;
 width: 342px;
 height: 54px;
 left: 24px;
-top: 526px;
+top: 566px;
 display: grid;
 grid-template-columns: 1fr 2fr 3fr;
 padding: 21px 9px;
@@ -206,8 +214,8 @@ list-style: none;
 width: 308px;
 height: 151px;
 left: 50px;
-top: 600px;
-
+top: 658px;
+overflow: scroll;
 font-family: 'Anek Tamil';
 font-style: normal;
 font-weight: 400;
@@ -222,20 +230,19 @@ color: #FFFFFF;
     align-items: flex-start;
     padding: 22px 0px;
     gap: 10px;
-    
     position: absolute;
     width: 374px;
-    height: 367px;
+    height: 296px;
     overflow-x: scroll;
 left: 16px;
-top: 840px;
+top: 942px;
 }
 .title_movies_recomend{
     position: absolute;
     width: 322px;
     height: 19px;
     left: 27px;
-    top: 790px;
+    top: 894px;
     font-family: 'Candal';
     font-style: normal;
     font-weight: 400;
@@ -249,7 +256,7 @@ top: 840px;
 width: 311px;
 height: 35px;
 left: 33px;
-top: 740px;
+top: 853px;
 display: flex;
 justify-content: space-around;
 }
