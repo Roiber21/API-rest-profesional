@@ -15,6 +15,9 @@ title_movie_details= document.querySelector('#title_movie_details');
 sipnosis_movie= document.querySelector('#sipnosis_movie');
 reputation= document.querySelector('#reputation');
 movieDetailCategoryList= document.querySelector('#movieDetails .categorie_movie')
+movies_recomend= document.querySelector('#movies_recomend')
+
+
 
 
 
