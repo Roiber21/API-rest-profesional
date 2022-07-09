@@ -8,7 +8,15 @@ const api= axios.create({
     }
 })
 // utils
-function creatMovies(movies, container){
+const lazyLoader = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          const url = entry.target.getAttribute('data-img')
+          entry.target.setAttribute('src', url)
+        }
+      })
+    })
+function creatMovies(movies, container, lazyLoad = false){
   container.innerHTML='';
   movies.forEach(movie => {
        
@@ -17,10 +25,22 @@ function creatMovies(movies, container){
      movieImg.classList.add('img_container')
      movieImg.classList.add('movie-img')
      movieImg.setAttribute('alt', movie.title)
-     movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
+     movieImg.setAttribute(
+      lazyLoad? 'data-img': 'src',
+       'https://image.tmdb.org/t/p/w300' + movie.poster_path)
      movieContainer.addEventListener('click', ()=>{
        location.hash = '#movie=' + movie.id;
      })
+     if(lazyLoad){
+      lazyLoader.observe(movieImg)
+     }
+     movieImg.addEventListener('error', ()=>{
+       movieImg.setAttribute(
+         'src',
+         'https://cdn.dribbble.com/users/3167939/screenshots/10422336/media/b618a0e73996c3b24b58b2db1c881ee3.png?compress=1&resize=768x576&vertical=top'
+       )
+     })
+     
      
      movieContainer.appendChild(movieImg)
      container.appendChild(movieContainer)
@@ -56,7 +76,7 @@ async function getTrendingMoviesPreview() {
     const {data} = await api('/trending/movie/day?');
     const movies = data.results;
     console.log({movies})
-    creatMovies(movies,trendingPreviewMoviesContainer);
+    creatMovies(movies,trendingPreviewMoviesContainer, true);
 
   }
 async function getCategoriesPreview() {
@@ -84,18 +104,7 @@ async function getCategoriesPreview() {
 
   }
   
-  async function getMoviesByCategorie(id) {
-    const {data} = await api('discover/movie',{
-      params:{
-        with_genres:id,
-      }
-    });
-   
-    const movies = data.results;
-    console.log({movies})
-    creatMovies(movies,genericList)
 
-  }
   async function getMoviesByCategorie(id) {
     const {data} = await api('discover/movie',{
       params:{
@@ -105,7 +114,7 @@ async function getCategoriesPreview() {
    
     const movies = data.results;
     console.log({movies})
-    creatMovies(movies,genericList)
+    creatMovies(movies,genericList, true)
 
   }
   async function getMoviesBySearch(query){
@@ -144,5 +153,5 @@ async function getCategoriesPreview() {
     const {data} = await api(`/movie/${id}/similar`);
     const similarMovies= data.results;
     
-    creatMovies(similarMovies, movies_recomend)
+    creatMovies(similarMovies, movies_recomend, true)
   }
