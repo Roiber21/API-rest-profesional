@@ -1,5 +1,10 @@
+
+let page= 1;
+let infiniteScroll;
 window.addEventListener('DOMContentLoaded', navigator, false)
 window.addEventListener('hashchange', navigator, false)
+window.addEventListener('scroll', infiniteScroll, {passive: false})
+
 
 trendingBtn.addEventListener('click', () => {
     location.hash = '#trends';
@@ -14,6 +19,9 @@ arrow.addEventListener('click', () => {
   });
 
 function navigator (){
+    if(infiniteScroll){
+        window.addEventListener('scroll', infiniteScroll, {passive: false})
+    }
     console.log({location})
 if (location.hash.startsWith('#trends')){
    trendsPage()
@@ -28,6 +36,9 @@ if (location.hash.startsWith('#trends')){
 }
 document.body.scrollTop=0;
 document.documentElement.scrollTop= 0;
+if(infiniteScroll){
+    window.addEventListener('scroll', infiniteScroll, {passive: false})
+}
 }
 
 function homePage (){
@@ -65,6 +76,7 @@ function trendsPage (){
 
 
     getTrendingMovies()
+    infiniteScroll= getPaginatedTrendingMovies;
 
 }
 function searchPage (){

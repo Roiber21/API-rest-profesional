@@ -16,8 +16,15 @@ const lazyLoader = new IntersectionObserver((entries)=>{
         }
       })
     })
-function creatMovies(movies, container, lazyLoad = false){
-  container.innerHTML='';
+function creatMovies(movies, container,
+  {  lazyLoad = false, 
+    clean=true
+  }= {},
+  ){
+  if (clean){
+    container.innerHTML='';
+  }
+ 
   movies.forEach(movie => {
        
     const movieContainer= document.createElement('div')
@@ -76,11 +83,12 @@ async function getTrendingMoviesPreview() {
     const {data} = await api('/trending/movie/day?');
     const movies = data.results;
     console.log({movies})
-    creatMovies(movies,trendingPreviewMoviesContainer, true);
+    creatMovies(movies,trendingPreviewMoviesContainer, {lazyLoad:true});
 
   }
 async function getCategoriesPreview() {
     const {data} = await api('genre/movie/list?');
+
     
     const categories = data.genres;
     const categoriesPreviewContainer= document.querySelector('#categoriesPreview .categories_ul')
@@ -132,7 +140,38 @@ async function getCategoriesPreview() {
     const {data} = await api('/trending/movie/day?');
     const movies = data.results;
     console.log({movies})
-    creatMovies(movies,genericList);
+    creatMovies(movies,genericList,  
+      {
+        lazyLoad:true, 
+        clean:true
+      });
+     
+    // const btnLoadMore = document.createElement('button')
+    // btnLoadMore.innerText='cargar mas'
+    // genericList.appendChild(btnLoadMore);
+    // btnLoadMore.addEventListener('click', getPaginatedTrendingMovies);
+
+  }
+
+  async function getPaginatedTrendingMovies() {
+    const {scrollHeight, scrollTop, clientHeight}= document.documentElement;
+   const scrollIsBottom =(scrollTop + clientHeight )>=(scrollHeight -15);
+   if(scrollIsBottom){
+    page ++;
+    const {data} = await api('/trending/movie/day?',{
+      params:{
+        page,
+      }
+    });
+    const movies = data.results;
+    console.log({movies})
+    creatMovies(movies,genericList,
+      {
+        lazyLoad:true, 
+        clean:false
+      });
+   }
+   
 
   }
   async function getMovieById(id){
