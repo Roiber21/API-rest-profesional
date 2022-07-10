@@ -1,6 +1,7 @@
 
 let page= 1;
 let infiniteScroll;
+let maxPage;
 window.addEventListener('DOMContentLoaded', navigator, false)
 window.addEventListener('hashchange', navigator, false)
 window.addEventListener('scroll', infiniteScroll, {passive: false})
