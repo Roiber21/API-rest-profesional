@@ -35,12 +35,17 @@ function creatMovies(movies, container,
      movieImg.setAttribute(
       lazyLoad? 'data-img': 'src',
        'https://image.tmdb.org/t/p/w300' + movie.poster_path)
-     movieContainer.addEventListener('click', ()=>{
-       location.hash = '#movie=' + movie.id;
-     })
+     
+     const movieBtn= document.createElement('button')
+     movieBtn.classList.add('movie-Btn')
+     movieBtn.addEventListener('click', ()=> 
+     movieBtn.classList.toggle('movie-Btn--liked'))
      if(lazyLoad){
       lazyLoader.observe(movieImg)
      }
+     movieImg.addEventListener('click', ()=>{
+      location.hash = '#movie=' + movie.id;
+    })
      movieImg.addEventListener('error', ()=>{
        movieImg.setAttribute(
          'src',
@@ -50,6 +55,7 @@ function creatMovies(movies, container,
      
      
      movieContainer.appendChild(movieImg)
+     movieContainer.appendChild(movieBtn)
      container.appendChild(movieContainer)
 
  });
