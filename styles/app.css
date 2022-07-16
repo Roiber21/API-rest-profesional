@@ -2,10 +2,26 @@
 * { box-sizing: border-box; 
     
 }
+:root{
+    /* text */
+--font-family-h1:'Lato', sans-serif;
+--font-weigth-h1:700;
+--font-size-h1:27px;
+--font-family-h2:'Roboto', sans-serif;
+--font-weigth-h2:400;
+--font-family-h3:'Roboto', sans-serif;
+--font-weigth-h3:300;
+--font-size-h3:16px;
+--background--color:rgba(22, 33, 41, 1);
+--primary-color:#57A1A6;
+--blue-light-color:rgba(87, 161, 166, 0.16);
+--blue-light-color2:rgba(87, 161, 166, 0.54);
 
+
+}
 
 body{
-    background-color: rgba(22, 33, 41, 1);
+    background-color:var(--background--color);
     margin: 0;
 }
 .user_info{
@@ -17,7 +33,9 @@ body{
     display:flex;
     flex-direction: row;
     top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-family-h2);
+    font-weight: var(--font-weigth-h3);
+    font-size: 20px;
     color:white;
 }
 .name{
@@ -25,9 +43,8 @@ body{
     left: 3px;
 }
 .hi{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:400;
-    font-size: 20px;
+    font-family: var(--font-family-h2);
+    font-weight: var(--font-weigth-h2);
 }
 .user_img{
     position: relative;
@@ -35,7 +52,8 @@ body{
     width: 37px;
     height: 37px;
     border-radius: 50px;
-    left: 150px;
+    left: 185px;
+    object-fit: cover;
 }
 .searchForm input{
     position: absolute;
@@ -77,12 +95,14 @@ width: 77px;
 height: 32px;
 background: #57A1A6;
 border-radius: 8px;
+font-family: var(--font-family-h2);
+font-weight: 100;
+font-size:16px;
 }
 .tendencias span{
-    font-family: 'Anaheim';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 27px;
+    font-family: var(--font-family-h1);
+    font-weight: var(--font-weigth-h1);
+    font-size:var(--font-size-h1);
     line-height: 35px;
     color: #F5F5F5;
     position: relative;
@@ -123,13 +143,10 @@ width: 164px;
 height: 19px;
 left: 26px;
 top: 454px;
-
-font-family: 'Anaheim';
-font-style: normal;
-font-weight: 400;
-font-size: 27px;
-line-height: 35px;
-
+font-family: var(--font-family-h1);
+    font-weight: var(--font-weigth-h1);
+    font-size:var(--font-size-h1);
+    line-height: 35px;
 color: #F5F5F5;
 }
 .categories_ul{
@@ -145,12 +162,14 @@ width: 101px;
 height: 34px;
 background: #57A1A6;
 border-radius: 19px;
-font-size: 16px;
 text-align: center;
+font-family: var(--font-family-h2);
+font-weight:var(--font-weigth-h3);
+font-size:16px;
 }
 .categories_li2{
 
-    width: 101px;
+    width: 118px;
     height: 34px;
     background: rgba(87, 161, 166, 0.16);
     border-radius: 19px;
@@ -158,6 +177,9 @@ text-align: center;
     font-size: 16px;
     color: white;
     line-height: 30px;
+    font-family: var(--font-family-h2);
+    font-weight: var(--font-weigth-h3);
+    font-size: 16px;
    
 }
 
@@ -225,10 +247,9 @@ height: 151px;
 left: 50px;
 top: 658px;
 overflow: scroll;
-font-family: 'Anek Tamil';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
+font-family: var(--font-family-h2);
+    font-weight: var(--font-weigth-h2);
+font-size: 17px;
 line-height: 20px;
 
 color: #FFFFFF;
@@ -271,10 +292,9 @@ justify-content: space-around;
 }
 .botons button{
     border: none;
-    font-family: 'Anek Tamil';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-family: var(--font-family-h2);
+    font-weight: var(--font-weigth-h3);
+    font-size: 20px;
     line-height: 23px;
     
 color: white;    
@@ -390,8 +410,14 @@ animation: loading-skeleton infinite 1.5s;
    
   }
   .movie-Btn--liked::before{
-      content: '💜';
+      content: '💙';
       box-shadow: 0px 0px 10px 2px var(--purple-dark-1);
+  }
+  .fonts-titles{
+    font-family: var(--font-family-h1);
+    font-weight: var(--font-weigth-h1);
+    font-size:var(--font-size-h1);
+    line-height: 35px;
   }
 @keyframes loading-skeleton {
     0%, 100% {

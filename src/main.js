@@ -1,3 +1,4 @@
+//data
 const api= axios.create({
     baseURL:'https://api.themoviedb.org/3/',
     Headers:{
@@ -7,6 +8,10 @@ const api= axios.create({
     'api_key':API_KEY,
     }
 })
+
+function likeMovie(movie){
+  
+}
 // utils
 const lazyLoader = new IntersectionObserver((entries)=>{
       entries.forEach((entry)=>{
@@ -40,12 +45,14 @@ function creatMovies(movies, container,
      movieBtn.classList.add('movie-Btn')
      movieBtn.addEventListener('click', ()=> 
      movieBtn.classList.toggle('movie-Btn--liked'))
+     movieImg.addEventListener('click', ()=>{
+      location.hash = '#movie=' + movie.id;
+      likeMovie(movie);
+    })
+
      if(lazyLoad){
       lazyLoader.observe(movieImg)
      }
-     movieImg.addEventListener('click', ()=>{
-      location.hash = '#movie=' + movie.id;
-    })
      movieImg.addEventListener('error', ()=>{
        movieImg.setAttribute(
          'src',

@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/app.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap" rel="stylesheet">
+
 
   <title>PlatziMovies</title>
 </head>
@@ -28,8 +32,8 @@
             
     </div>
 <header id="user_info" class="user_info inactive ">
-    <p class="hi">HI,</p> <p class="name">Roiber Figueroa!</p>
-    <div class="user_img" src="" alt=""></div>
+    <p class="hi">HI,</p> <p class="name">user name!</p>
+   <img class="user_img" src="https://media-exp2.licdn.com/dms/image/C4D03AQFgU3WfoWeOoA/profile-displayphoto-shrink_200_200/0/1646711315008?e=1663200000&v=beta&t=-chYfrKQ-3tOqnxGRZM9waBS8UTnLSTiRszT7dXKQic" alt="">
 </header>
 <form id="searchForm" class="searchForm ">
     <input  type="text" placeholder="Search movies"/>
@@ -45,7 +49,7 @@
         </svg>
   </form>
  <section id="trending" class="tendencias inactive ">
-     <span>Tendencias</span>
+     <span class="fonts-titles">Tendencias</span>
      <button id="trendingBtn">Ver más</button>
  </section>
 <main id="trendingPreview" >
@@ -77,7 +81,7 @@
 </main>
 
 <section id="categoriesPreview" class="categories_container inactive" >
-    <p>Categorías</p>
+    <p class="fonts-titles" >Categorías</p>
     <article class="categories_ul">
      <div class="categories--loading">
         <!-- <span>Accion</span> -->
@@ -96,7 +100,7 @@
     </article>
 </section>
 <div>
-  <h1 id="title_genericList" class="title_genericList">Accion</h1>
+  <h1 id="title_genericList" class="title_genericList fonts-titles">Accion</h1>
 </div>
 <section id="genericList"  class="categories_movies_list inactive" >
  <article class="img_container--loading"> 
@@ -125,7 +129,7 @@
           alt="Nombre de la película"
         />
       </div>
-      <span id="title_movie_details" class="title_movie">SPIDER-MAN</span>
+      <span id="title_movie_details" class="title_movie fonts-titles">SPIDER-MAN</span>
       <svg class="reputation_icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.5 0C4.25329 0 0 4.25329 0 9.5C0 14.7467 4.25329 19 9.5 19C14.7467 19 19 14.7467 19 9.5C19 4.25329 14.7467 0 9.5 0ZM9.56262 3.32361L11.0598 7.99822L15.9663 8.10839L11.9829 10.9751L13.3942 15.6764L9.43622 12.7737L5.40173 15.5697L6.93945 10.9078L3.03368 7.93445L7.94255 7.95649L9.56262 3.32361Z" fill="white"/>
         </svg>
@@ -151,7 +155,7 @@
           <button>ver ahora</button>
           <button>ver mas tarde</button>
       </div>
-      <h1 class="title_movies_recomend">Peliculas recomendadas</h1>
+      <h1 class="title_movies_recomend fonts-titles">Peliculas recomendadas</h1>
       <section id="movies_recomend" class="movies_recomend">
         <article >
             <div class="img_container--loading" >
@@ -174,7 +178,7 @@
       </section>
 
 </section>
-<span class="title_liked ">Peliculas favoritas</span>
+<span class="title_liked fonts-titles">Peliculas favoritas</span>
 <section id="liked_section" class="liked_section_container inactive ">
   <article >
     <div class="img_container" >
