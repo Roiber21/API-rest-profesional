@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content= "width=device-width, user-scalable=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/app.css" />
+  <link rel="stylesheet" href="./styles/tablet.css" media="(min-width: 768px)">
+  <link rel="stylesheet" href="./styles/desktop.css" media="(min-width: 961px)">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap" rel="stylesheet">
@@ -123,12 +124,13 @@
   </section>
 
 <section id="movieDetails" class="movie_details inactive">
-    <div  >
+   
         <img id="img_movie_details" class="movie_img" 
           class="movie-img"
           alt="Nombre de la película"
         />
-      </div>
+     
+      <main class="details_container"> 
       <span id="title_movie_details" class="title_movie fonts-titles">SPIDER-MAN</span>
       <svg class="reputation_icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.5 0C4.25329 0 0 4.25329 0 9.5C0 14.7467 4.25329 19 9.5 19C14.7467 19 19 14.7467 19 9.5C19 4.25329 14.7467 0 9.5 0ZM9.56262 3.32361L11.0598 7.99822L15.9663 8.10839L11.9829 10.9751L13.3942 15.6764L9.43622 12.7737L5.40173 15.5697L6.93945 10.9078L3.03368 7.93445L7.94255 7.95649L9.56262 3.32361Z" fill="white"/>
@@ -155,6 +157,7 @@
           <button>ver ahora</button>
           <button>ver mas tarde</button>
       </div>
+    </main>
       <h1 class="title_movies_recomend fonts-titles">Peliculas recomendadas</h1>
       <section id="movies_recomend" class="movies_recomend">
         <article >
@@ -178,7 +181,7 @@
       </section>
 
 </section>
-<span class="title_liked fonts-titles">Peliculas favoritas</span>
+<span id="liked_section2" class="title_liked fonts-titles">Peliculas favoritas</span>
 <section id="liked_section" class="liked_section_container inactive ">
   <article >
     <div class="img_container" >
@@ -188,7 +191,61 @@
         alt="Nombre de la película"
       />
     </div>
- 
+ </article>
+  <article >
+    <div class="img_container" >
+      <img class="img_container" 
+        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+        class="movie-img"
+        alt="Nombre de la película"
+      />
+    </div>
+ </article>
+  <article >
+    <div class="img_container" >
+      <img class="img_container" 
+        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+        class="movie-img"
+        alt="Nombre de la película"
+      />
+    </div>
+ </article>
+  <article >
+    <div class="img_container" >
+      <img class="img_container" 
+        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+        class="movie-img"
+        alt="Nombre de la película"
+      />
+    </div>
+ </article>
+  <article >
+    <div class="img_container" >
+      <img class="img_container" 
+        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+        class="movie-img"
+        alt="Nombre de la película"
+      />
+    </div>
+ </article>
+  <article >
+    <div class="img_container" >
+      <img class="img_container" 
+        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+        class="movie-img"
+        alt="Nombre de la película"
+      />
+    </div>
+ </article>
+  <article >
+    <div class="img_container" >
+      <img class="img_container" 
+        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+        class="movie-img"
+        alt="Nombre de la película"
+      />
+    </div>
+ </article>
   
 </section>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

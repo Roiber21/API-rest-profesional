@@ -44,6 +44,8 @@ if(infiniteScroll){
 }
 
 }
+const $liked_section2 = document.querySelector("#liked_section2");
+const $liked_section = document.querySelector("#liked_section");
 
 function homePage (){
     console.log('HOME')
@@ -56,6 +58,8 @@ function homePage (){
     categoriesPreviewContainer.classList.remove('inactive')
     arrow.classList.add('inactive')
     title_genericList.classList.add('inactive')
+$liked_section.style.display = "flex";
+$liked_section2.style.display = "n";
     
 
     
@@ -117,6 +121,9 @@ function categoriesPage (){
     categoriesPreviewContainer.classList.add('inactive')
     arrow.classList.remove('inactive')
     title_genericList.classList.remove('inactive')
+$liked_section.style.display = "none";
+$liked_section2.style.display='none'
+
    
     
     //   ['#category', 'id-name']
@@ -141,7 +148,11 @@ function movieDetailsPage (){
     categoriesPreviewContainer.classList.add('inactive')
     arrow.classList.remove('inactive')
     title_genericList.classList.add('inactive')
-    
+    liked_section.classList.add('inactive')
+    const $liked_section = document.querySelector("#liked_section");
+$liked_section.style.display = "none";
+    const $liked_section2 = document.querySelector("#liked_section2");
+$liked_section2.style.display = "none";
  
 
      //   ['#movie', 'id']

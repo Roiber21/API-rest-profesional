@@ -59,6 +59,7 @@ function creatMovies(movies, container,
          'https://cdn.dribbble.com/users/3167939/screenshots/10422336/media/b618a0e73996c3b24b58b2db1c881ee3.png?compress=1&resize=768x576&vertical=top'
        )
      })
+    
      
      
      movieContainer.appendChild(movieImg)

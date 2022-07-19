@@ -23,6 +23,7 @@ liked_section= document.querySelector('#liked_section')
 
 
 
+
 trendingBtn= document.querySelector('#trendingBtn');
 title_genericList= document.querySelector('#title_genericList');
 

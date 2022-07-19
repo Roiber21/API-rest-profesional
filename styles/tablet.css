@@ -1,0 +1,103 @@
+@media (min-width:768px){
+    .categories_container {
+        margin-left: 55px;
+        position: absolute;
+        width: 94%;
+        height: 19px;
+        /* left: 27px; */
+        top: 454px;
+        padding: -15px;
+        font-family: var(--font-family-h1);
+        font-weight: var(--font-weigth-h1);
+        font-size: var(--font-size-h1);
+        line-height: 35px;
+        color: #F5F5F5;
+    }
+    .categories_ul {
+        flex-direction: row;
+        padding: 0px 0px;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        /* list-style: none; */
+    }
+    .categories_li {
+        width: 109px;
+     }
+     .title_liked {
+        left: 75px;
+        top: 696px;
+    }
+    .liked_section_container {
+        width: 99vw;
+        top: 729px;
+        
+    }
+    .tendencias_movies {
+        width: 99vw;
+    }
+    .searchForm input {
+        right: 9px;
+    }
+    .categories_movies_list {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .details_container{
+        border-radius: 24px;
+        padding: 35px;
+        flex-direction: column;
+        width: 82%;
+        top: 491px;
+        position: absolute;
+        align-items: center;
+        margin: 4px;
+        left: 70px;
+        justify-content: center;
+        height: 454px;
+        display: flex;
+        /* background: white; */
+        /* background: blueviolet; */
+        background: rgba(87, 161, 166, 0.23);
+    }
+    .title_movie {
+        position: static;    
+        }
+        .categorie_movie {
+            position: static;
+            height: 105px;
+        }
+        .sipnosis {
+           position: static;
+           width: 605px;
+        }
+          .botons {
+            position: static;
+        }
+          .botons button:hover {
+            background-color: var(--blue-light-color);
+            cursor: pointer;
+        }
+         .reputation_icon {
+                position: relative;
+                width: 45px;
+                height: 19px;
+                left: -214px;
+                top: 33px;
+               
+            }
+            .reputation {
+                position: relative;
+                height: 19px;
+                left: -168px;
+                top: 2px;
+            }
+            .movies_recomend {
+              
+                width: 97vw;
+                top: 986px;
+            }
+            .title_movies_recomend {
+                top: 936px;
+            }
+
+}

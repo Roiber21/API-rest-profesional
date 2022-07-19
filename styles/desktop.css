@@ -1,0 +1,154 @@
+@media (min-width:961px){
+    .searchForm input{
+        width: 643px;
+    }
+    .searchForm{
+    left: 480px;
+    }
+    .searchForm svg{
+
+        left: 560px;
+      
+    }
+    .tendencias_movies{
+        gap: 20px;
+        width: 80%;
+        height: 430px;
+        left: 260px;
+      
+      
+    }
+    .tendencias{
+        left: 150px;
+    }
+    .tendencias button:hover{
+        background-color: var(--blue-light-color);
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    .img_container{
+  
+        min-width: 220px;
+    min-height: 300px;
+
+    
+    }
+    .categories_container{
+        margin-left: 0px;
+        padding: 56px;
+        position: absolute;
+        width: 248px;
+        min-height:160vh;
+        left: -3px;
+        top: -54px;
+        line-height: 35px;
+        color: #F5F5F5;
+        background-color: var(--blue-light-color);
+    }
+
+    .title_liked{
+        left: 277px;
+        top: 510px;
+    }
+    .categories_ul{
+        display: flex;
+        flex-direction: column;
+       
+        
+           padding: 21px 0px;
+           gap: 10px;
+           list-style: none;
+           
+           }
+           .categories_li{
+            width: 140px;
+           background:var(--blue-light-color2);
+           cursor: pointer;
+    
+           }
+           .categories_li:hover{
+               background: var(--blue-light-color);
+           }
+        .liked_section_container{
+            top: 532px;
+            gap: 20px;
+            width: 80%;
+            height: 340px;
+            left: 260px;
+        }
+        .details_container{
+            border-radius: 24px;
+    padding: 35px;
+    flex-direction: column;
+    width: 504px;
+    top: 24px;
+    position: absolute;
+    align-items: center;
+    margin: auto;
+    left: 778px;
+    height: 438px;
+    display: flex;
+    /* background: white; */
+    /* background: blueviolet; */
+    background: rgba(87, 161, 166, 0.23);
+        }
+        .movie_img {
+            position: relative;
+            width: 612px;
+            height: 489px;
+            left: 110px;
+            top: 0px;
+            cursor: pointer;
+        
+        }
+        .title_movie {
+        position: static;    
+        }
+        .categorie_movie {
+            position: static;
+            height: 105px;
+        }
+        .sipnosis {
+           position: static;
+           width: 400px;
+        }
+          .botons {
+            position: static;
+        }
+          .botons button:hover {
+            background-color: var(--blue-light-color);
+            cursor: pointer;
+        }
+         .reputation_icon {
+                position: relative;
+                width: 45px;
+                height: 19px;
+                left: -214px;
+                top: 33px;
+               
+            }
+            .reputation {
+                position: relative;
+                height: 19px;
+                left: -168px;
+                top: 2px;
+            }
+            .movies_recomend {
+                width: 98vw;
+                height: 363px;
+                top: 580px;
+                gap: 20px;
+                cursor: pointer;
+            }
+            .title_movies_recomend {
+                top: 511px;
+             }
+             .categories_movies_list {
+                grid-template-columns: repeat(5,1fr);
+            }
+            
+        }
+    
+  
+ 
