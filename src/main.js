@@ -8,9 +8,25 @@ const api= axios.create({
     'api_key':API_KEY,
     }
 })
+function likedMoviesList(){
+  const item = JSON.parse(localStorage.getItem('liked_movies'));
+  let movies;
+  if(item){
+    movies= item;
+  }else{
+    movies={};
+  }
+  return movies
+}
 
 function likeMovie(movie){
-  
+  const likedMovies= likedMoviesList();
+  if(likedMovies[movie.id]){
+    likedMovies[movie.id]= undefined;
+  }else{
+    likedMovies[movie.id]=movie;
+  }
+  localStorage.setItem('liked_movies',JSON.stringify(likedMovies))
 }
 // utils
 const lazyLoader = new IntersectionObserver((entries)=>{
@@ -40,15 +56,18 @@ function creatMovies(movies, container,
      movieImg.setAttribute(
       lazyLoad? 'data-img': 'src',
        'https://image.tmdb.org/t/p/w300' + movie.poster_path)
+       movieImg.addEventListener('click', ()=>{
+        location.hash = '#movie=' + movie.id;
+      })
      
      const movieBtn= document.createElement('button')
      movieBtn.classList.add('movie-Btn')
-     movieBtn.addEventListener('click', ()=> 
-     movieBtn.classList.toggle('movie-Btn--liked'))
-     movieImg.addEventListener('click', ()=>{
-      location.hash = '#movie=' + movie.id;
-      likeMovie(movie);
-    })
+     movieBtn.addEventListener('click', ()=> {
+      movieBtn.classList.toggle('movie-Btn--liked')
+      likeMovie(movie)
+     }) 
+   
+  
 
      if(lazyLoad){
       lazyLoader.observe(movieImg)
