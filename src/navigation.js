@@ -62,14 +62,11 @@ $liked_section.style.display = "flex";
 $liked_section2.style.display = "n";
     
 
-    
-   
-  
-    
-
 
     getTrendingMoviesPreview();
     getCategoriesPreview();
+    getLikedMovies();
+   
 }
 function trendsPage (){
     console.log('TRENDS!!')
@@ -101,6 +98,9 @@ function searchPage (){
     categoriesPreviewContainer.classList.add('inactive')
     arrow.classList.remove('inactive')
     title_genericList.classList.add('inactive')
+    $liked_section.style.display = "none";
+    const $liked_section2 = document.querySelector("#liked_section2");
+$liked_section2.style.display = "none";
     
 
      

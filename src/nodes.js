@@ -7,6 +7,7 @@ sectionMovieDetails= document.querySelector('#movieDetails');
 genericList= document.querySelector('#genericList');
 
 
+
 // elements
 arrow= document.querySelector('#arrow');
 search_button= document.querySelector('#search_button');
@@ -18,6 +19,7 @@ reputation= document.querySelector('#reputation');
 movieDetailCategoryList= document.querySelector('#movieDetails .categorie_movie')
 movies_recomend= document.querySelector('#movies_recomend')
 liked_section= document.querySelector('#liked_section')
+likedMovieListArticle= document.querySelector('.liked_section_container')
 
 
 

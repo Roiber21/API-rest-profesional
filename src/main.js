@@ -1,4 +1,5 @@
 //data
+let lang = navigator.languages;
 const api= axios.create({
     baseURL:'https://api.themoviedb.org/3/',
     Headers:{
@@ -6,8 +7,12 @@ const api= axios.create({
     },
     params:{
     'api_key':API_KEY,
+    'language':lang
     }
+    
 })
+
+
 function likedMoviesList(){
   const item = JSON.parse(localStorage.getItem('liked_movies'));
   let movies;
@@ -21,12 +26,16 @@ function likedMoviesList(){
 
 function likeMovie(movie){
   const likedMovies= likedMoviesList();
+  console.log(likedMovies)
   if(likedMovies[movie.id]){
     likedMovies[movie.id]= undefined;
   }else{
     likedMovies[movie.id]=movie;
   }
   localStorage.setItem('liked_movies',JSON.stringify(likedMovies))
+  if (location.hash == ''){
+    homePage();
+  }
 }
 // utils
 const lazyLoader = new IntersectionObserver((entries)=>{
@@ -59,9 +68,10 @@ function creatMovies(movies, container,
        movieImg.addEventListener('click', ()=>{
         location.hash = '#movie=' + movie.id;
       })
-     
+   
      const movieBtn= document.createElement('button')
      movieBtn.classList.add('movie-Btn')
+     likedMoviesList()[movie.id] &&   movieBtn.classList.add('movie-Btn--liked')
      movieBtn.addEventListener('click', ()=> {
       movieBtn.classList.toggle('movie-Btn--liked')
       likeMovie(movie)
@@ -283,4 +293,10 @@ async function getCategoriesPreview() {
     const similarMovies= data.results;
     
     creatMovies(similarMovies, movies_recomend, true)
+  }
+  function getLikedMovies(){
+    const likedMovies= likedMoviesList();
+    const moviesArray = Object.values(likedMovies)
+    creatMovies(moviesArray,likedMovieListArticle, {lazyLoad:true , clean:true});
+    console.log(likedMovies)
   }
