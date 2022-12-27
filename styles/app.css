@@ -139,20 +139,20 @@ object-fit: cover;
 
 .categories_container{
     position: absolute;
-width: 164px;
-height: 19px;
-left: 26px;
-top: 454px;
-font-family: var(--font-family-h1);
+    width: 100vw;
+    height: 19px;
+    top: 454px;
+    font-family: var(--font-family-h1);
     font-weight: var(--font-weigth-h1);
-    font-size:var(--font-size-h1);
+    font-size: var(--font-size-h1);
     line-height: 35px;
-color: #F5F5F5;
+    color: #F5F5F5;
 }
+
 .categories_ul{
  display: grid;
-grid-template-columns: 1fr 2fr 3fr;
-padding: 21px 9px;
+grid-template-columns: repeat(3, 1fr);
+justify-items: center;
 gap: 10px;
 list-style: none;
 
@@ -407,6 +407,7 @@ animation: loading-skeleton infinite 1.5s;
     font-weight: var(--font-weigth-h1);
     font-size:var(--font-size-h1);
     line-height: 35px;
+    margin-left: 17px;
   }
 @keyframes loading-skeleton {
     0%, 100% {

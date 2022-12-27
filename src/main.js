@@ -299,4 +299,5 @@ async function getCategoriesPreview() {
     const moviesArray = Object.values(likedMovies)
     creatMovies(moviesArray,likedMovieListArticle, {lazyLoad:true , clean:true});
     console.log(likedMovies)
+    console.log(localStorage)
   }
